@@ -1,0 +1,198 @@
+import { Project, SkillItem } from '../utils/portfolio.ts';
+
+export const PROJECTS_DATA: Project[] = [
+  {
+    id: 'cloud-dashboard',
+    title: 'Cloud Infrastructure Dashboard',
+    category: 'cloud',
+    categoryLabel: 'Cloud Infrastructure',
+    tag: 'Cloud Infrastructure',
+    shortDesc: 'Monitoring and scaling cloud-based microservices with automated telemetry.',
+    fullDesc:
+      'A resilient telemetry and resource orchestration dashboard engineered for microservice environments. Features real-time cluster health tracking, auto-scaling triggers based on CPU/memory saturation, and latency diagnostics.',
+    techStack: ['Docker', 'Kubernetes', 'Python', 'FastAPI', 'Prometheus', 'Grafana'],
+    metrics: [
+      { label: 'Uptime Target', value: '99.98%' },
+      { label: 'Avg Latency', value: '24ms' },
+      { label: 'Auto-scale Speed', value: '< 15s' },
+    ],
+    highlights: [
+      'Automated container provisioning based on traffic thresholds',
+      'Fault tolerance and load-balancing across multi-zone instances',
+      'Structured JSON logging with trace correlation IDs',
+    ],
+    githubUrl: 'https://github.com',
+    liveDemoAvailable: true,
+  },
+  {
+    id: 'ai-evaluator',
+    title: 'AI Model Evaluator',
+    category: 'ai',
+    categoryLabel: 'Machine Learning & AI',
+    tag: 'Machine Learning & AI',
+    shortDesc: 'A tool for benchmarking machine learning datasets and classification performance.',
+    fullDesc:
+      'An analytical suite for comparative evaluation of supervised models. Automatically generates confusion matrices, precision-recall curves, ROC-AUC benchmarks, and evaluates model inference latency across dataset batches.',
+    techStack: ['Python', 'PyTorch', 'Scikit-Learn', 'Pandas', 'NumPy', 'Matplotlib'],
+    metrics: [
+      { label: 'F1 Benchmark', value: '0.942' },
+      { label: 'Inference Speed', value: '18ms/batch' },
+      { label: 'Evaluation Sets', value: '10K+ samples' },
+    ],
+    highlights: [
+      'Interactive confidence threshold tuning with immediate ROC calculation',
+      'Automated cross-validation reporting and metric exporting',
+      'Comparative latency benchmarking for edge CPU vs GPU runs',
+    ],
+    githubUrl: 'https://github.com',
+    liveDemoAvailable: true,
+  },
+  {
+    id: 'stream-pipeline',
+    title: 'Distributed Stream Pipeline',
+    category: 'systems',
+    categoryLabel: 'Distributed Systems',
+    tag: 'Distributed Systems',
+    shortDesc: 'Asynchronous streaming and ETL data processing pipeline for high-load systems.',
+    fullDesc:
+      'Designed for reliable stream processing, transforming incoming sensor data streams into clean columnar aggregates for downstream analytical querying and anomaly detection.',
+    techStack: ['Python', 'Apache Kafka', 'Redis', 'Docker Compose', 'PostgreSQL'],
+    metrics: [
+      { label: 'Throughput', value: '12,500 msg/s' },
+      { label: 'Queue Overhead', value: '< 4ms' },
+      { label: 'Data Integrity', value: '100%' },
+    ],
+    highlights: [
+      'Decoupled publisher-subscriber architecture with persistent backpressure',
+      'In-memory Redis caching layer for near-instant metric lookups',
+      'Dockerized multi-container orchestration for reproducible deployment',
+    ],
+    githubUrl: 'https://github.com',
+    liveDemoAvailable: true,
+  },
+  {
+    id: 'neural-vision',
+    title: 'Neural Vision Classifier',
+    category: 'ai',
+    categoryLabel: 'Machine Learning & AI',
+    tag: 'Computer Vision',
+    shortDesc: 'Convolutional neural network for image feature extraction and multi-class classification.',
+    fullDesc:
+      'A lightweight convolutional architecture designed to classify visual datasets with minimal parameter count, optimized for rapid training and edge deployment in constrained cloud VMs.',
+    techStack: ['Python', 'PyTorch', 'OpenCV', 'Torchvision', 'TensorBoard'],
+    metrics: [
+      { label: 'Top-1 Accuracy', value: '92.6%' },
+      { label: 'Model Size', value: '14.2 MB' },
+      { label: 'Epochs to Converge', value: '28' },
+    ],
+    highlights: [
+      'Transfer learning fine-tuning with custom feature extraction heads',
+      'Data augmentation pipelines (random rotations, color jitter, cutout)',
+      'Visual saliency maps for model interpretability',
+    ],
+    githubUrl: 'https://github.com',
+    liveDemoAvailable: true,
+  },
+];
+
+export const SKILLS_DATA: SkillItem[] = [
+  {
+    id: 'python',
+    name: 'Python',
+    category: 'programming',
+    categoryLabel: 'Programming & AI',
+    level: 'Advanced',
+    description: 'Primary language for machine learning, data engineering, and automation scripts.',
+    iconName: 'Code',
+  },
+  {
+    id: 'cloud',
+    name: 'Cloud Computing',
+    category: 'cloud',
+    categoryLabel: 'Architecture & Services',
+    level: 'Core Focus',
+    description: 'Cloud architecture principles, microservices, containerization, and deployment patterns.',
+    iconName: 'Cloud',
+  },
+  {
+    id: 'algorithms',
+    name: 'Algorithms',
+    category: 'algorithms',
+    categoryLabel: 'Problem Solving',
+    level: 'Advanced',
+    description: 'Data structures, algorithmic complexity (Big-O), graph theory, and dynamic programming.',
+    iconName: 'Cpu',
+  },
+  {
+    id: 'math',
+    name: 'Mathematics',
+    category: 'math',
+    categoryLabel: 'Prepa TIC Foundations',
+    level: 'Foundation',
+    description: 'Linear algebra, matrix operations, multivariate calculus, probability & statistics.',
+    iconName: 'Binary',
+  },
+  {
+    id: 'pytorch',
+    name: 'PyTorch & ML',
+    category: 'programming',
+    categoryLabel: 'Machine Learning',
+    level: 'Proficient',
+    description: 'Neural network architecture modeling, tensor computations, gradient backpropagation.',
+    iconName: 'Brain',
+  },
+  {
+    id: 'docker',
+    name: 'Docker & Containers',
+    category: 'cloud',
+    categoryLabel: 'DevOps & Systems',
+    level: 'Proficient',
+    description: 'Containerizing applications, multi-stage builds, and Compose orchestration.',
+    iconName: 'Layers',
+  },
+  {
+    id: 'linux',
+    name: 'Linux & Bash',
+    category: 'tools',
+    categoryLabel: 'System Administration',
+    level: 'Proficient',
+    description: 'Shell scripting, process management, networking configuration, and CLI workflows.',
+    iconName: 'Terminal',
+  },
+  {
+    id: 'git',
+    name: 'Git & Version Control',
+    category: 'tools',
+    categoryLabel: 'Engineering Practices',
+    level: 'Advanced',
+    description: 'Branching workflows, code reviews, collaborative repository maintenance.',
+    iconName: 'GitBranch',
+  },
+];
+
+export const ACADEMIC_CURRICULUM = [
+  {
+    semester: 'Prepa TIC · Year 2 (Current)',
+    institution: 'EPI (École Pluridisciplinaire Internationale)',
+    status: 'In Progress',
+    modules: [
+      'Advanced Algorithmic Design & Graph Theory',
+      'Applied Linear Algebra & Numerical Analysis',
+      'Operating Systems & Concurrent Programming in C/Python',
+      'Probability, Statistics & Data Modeling',
+      'Introduction to Cloud Computing & Microservices',
+    ],
+  },
+  {
+    semester: 'Prepa TIC · Year 1 (Completed)',
+    institution: 'EPI (École Pluridisciplinaire Internationale)',
+    status: 'Completed with Honors',
+    modules: [
+      'Mathematical Analysis & Discrete Mathematics',
+      'Computer Architecture & Digital Logic',
+      'Foundations of Procedural & Object-Oriented Programming',
+      'Physics for Computer Engineers & Electromagnetism',
+      'Technical Communication & Scientific English',
+    ],
+  },
+];

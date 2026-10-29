@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-display: 'Space Grotesk', system-ui, sans-serif;
+  --color-pink-brand: #FF007A;
+  --color-pink-hover: #E6006E;
+  --color-pink-soft: #FFF0F7;
+  --color-purple-brand: #9D4EDD;
+}
+
+:root {
+  --accent-pink: #FF007A;
+  --accent-pink-hover: #E6006E;
+  --accent-pink-light: #FFF0F7;
+  --accent-purple: #9D4EDD;
+  --bg-primary: #FAF9FB;
+  --bg-surface: #FFFFFF;
+}
+
+.dark {
+  --accent-pink: #FF2E93;
+  --accent-pink-hover: #FF5Caa;
+  --accent-pink-light: rgba(255, 0, 122, 0.12);
+  --bg-primary: #0F0E14;
+  --bg-surface: #181622;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  min-height: 100vh;
+  background-color: var(--bg-primary);
+  background-image: 
+    radial-gradient(circle at 10% 12%, rgba(255, 0, 122, 0.08) 0%, transparent 45%),
+    radial-gradient(circle at 90% 25%, rgba(157, 78, 221, 0.07) 0%, transparent 40%),
+    radial-gradient(circle at 80% 75%, rgba(255, 0, 122, 0.06) 0%, transparent 45%);
+  background-attachment: fixed;
+}
+
+.font-display {
+  font-family: 'Space Grotesk', system-ui, sans-serif;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 0, 122, 0.2);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 0, 122, 0.4);
+}
